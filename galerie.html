@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    <!--
+   
+    src = ["img1.jpg", "img2.jpg", "img3.jpg"]
+    
+ 
+    durata = 4;
+    
+    var ex_ads=[]; var ex_ct=0;
+    function schimbaAd() {
+      var ex_nc=(ex_ct+1)%src.length;
+      if (ex_ads[ex_nc] && (ex_ads[ex_nc].complete || ex_ads[ex_nc].complete==null)) {
+        document["Imagine"].src = ex_ads[ex_ct=ex_nc].src;
+      }
+      ex_ads[ex_nc=(ex_ct+1)%src.length] = new Image;
+      ex_ads[ex_nc].src = src[ex_nc];
+      setTimeout("schimbaAd()",durata*1000);
+    }
+    function adLink() {
+      location.href = url[ex_ct];
+    }
+    
+    onload = function() {
+      if (document.images)
+        schimbaAd();
+    }
+    </script>
+<title>Galerie</title>
+</head>
+<link rel="stylesheet" type="text/css" href="contact.styke.css"
+
+<body>
+ 
+<p>  <FONT COLOR="#cc0000" FACE="Arial" SIZE="120">  <B>Galerie</B>  </FONT> </p>
+<style>
+ <p> {
+   text-align: right;
+ }
+</style>
+ <p class="main"><a href="H:\Photography-WEB\Index.html"><img src='back.png'width="40" height="40"><FONT COLOR="#ff0000" FACE="Arial" SIZE="15">  <B>back</B>  </FONT></a></p>
+ 
+
+
+
+<nav>
+
+    <style>
+      a:link, a:visited {
+        background-color: rgba(155, 155, 155, 0.644);
+        border-bottom: 1px solid rgb(145, 15, 15);
+        border-radius: 20px;
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 30px;
+        color:rgb(255, 8, 0);
+        padding: 15px 25px;
+        vertical-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      a:hover, a:active {
+        background-color: rgba(0, 0, 0, 0.822);
+      }
+      </style> 
+  <center> <a href="#"><b><br></br>Sedinta foto</b><br><br></br></a>  <a href="#"><b><br></br>Fotografie de eveniment</b><br><br></br></a>  <a href="#"><b><br></br>Natura</b><br><br></br></a> </center>
+   <center> <a href="javascript:adLink();" onMouseOver="status=url[ex_ct]; return true;" onMouseOut="status=''">
+      <img name="Imagine" src="img1.jpg" width="1000" height="1000" border="0">
+    </a> </center>
+  </div>
+<br></br>
+<br></br>
+<br></br>
+ 
